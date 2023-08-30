@@ -13,6 +13,21 @@ export class Pokeman{
 
     }
 
+    get activeTemplate(){
+        return `
+        <div class="col-5">
+        <h1>poky name</h1>
+      </div>
+      <div class="col-5">
+        <span>level | height | weight </span>
+        <span>abilities</span>
+        <span>held item</span>
+      </div>
+    </div>
+        `
+    }
+
+
 
 
     static PokemanTemplate(pokeman){
@@ -20,6 +35,9 @@ export class Pokeman{
         <p class="selectable" onclick="app.PokemansController.getOnePokeman('${pokeman.index}">${pokeman.name}</p>
         `
     }
+
+
+
 
 
 

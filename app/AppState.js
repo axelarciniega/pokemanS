@@ -5,7 +5,7 @@ import { isValidProp } from './utils/IsValidProp.js'
 import { loadState } from './utils/Store.js'
 
 class ObservableAppState extends EventEmitter {
-  
+ 
   pokemanList = []
   
   /**@type {Pokeman} */

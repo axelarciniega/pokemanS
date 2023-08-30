@@ -5,7 +5,10 @@ import { Pop } from "../utils/Pop.js"
 import { setHTML } from "../utils/Writer.js"
 
 
-
+function drawActivePokeman(){
+    let activePokeman = AppState.activePokeman
+    setHTML('active-pokeman', activePokeman)
+}
 
 
 

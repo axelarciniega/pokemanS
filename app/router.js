@@ -16,6 +16,7 @@ export const router = [
     <section class="row">
     <div class="bg-danger text-light col-4" id="pokeman-list">
     </div>
+    <div id="active-pokeman"></div>
     
     </section>
     `
