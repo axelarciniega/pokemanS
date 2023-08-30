@@ -1,4 +1,4 @@
-import { Pokemon } from './models/Pokemon.js'
+import { Pokeman } from './models/Pokeman.js'
 import { Value } from './models/Value.js'
 import { EventEmitter } from './utils/EventEmitter.js'
 import { isValidProp } from './utils/IsValidProp.js'
@@ -6,10 +6,10 @@ import { loadState } from './utils/Store.js'
 
 class ObservableAppState extends EventEmitter {
   
-  pokemonList = []
+  pokemanList = []
   
-  /**@type {Pokemon} */
-  activePokemon = null
+  /**@type {Pokeman} */
+  activePokeman = null
   
   
   

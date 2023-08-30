@@ -1,7 +1,7 @@
 
 
 
-export class Pokemon{
+export class Pokeman{
     constructor(data){
         this.id = data.id
         this.name = data.name
@@ -15,9 +15,9 @@ export class Pokemon{
 
 
 
-    static PokemonTemplate(pokemon){
+    static PokemanTemplate(pokeman){
         return `
-        <p class="selectable" onclick="app.PokemonsController.getOnePokemon('${pokemon.index}>${pokemon.name}</p>
+        <p class="selectable" onclick="app.PokemansController.getOnePokeman('${pokeman.index}">${pokeman.name}</p>
         `
     }
 
