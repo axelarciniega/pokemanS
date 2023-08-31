@@ -5,9 +5,10 @@ import { Pop } from "../utils/Pop.js"
 import { setHTML } from "../utils/Writer.js"
 
 
-function drawActivePokeman(){
+function _drawActivePokeman(){
+    console.log('Active Poky')
     let activePokeman = AppState.activePokeman
-    setHTML('active-pokeman', activePokeman)
+    setHTML('active-pokeman', activePokeman.activeTemplate)
 }
 
 
@@ -32,6 +33,7 @@ export class PokemansController{
         console.log('Hi from the controller')
         this.getPokemans()
         AppState.on('pokemanList', _drawPokemans)
+        AppState.on('activePokeman', _drawActivePokeman)
     }
 
     async getPokemans(){
@@ -43,10 +45,10 @@ export class PokemansController{
         }
     }
 
-    async getOnePokeman(index){
+    async getOnePokeman(name){
         try {
-            
-            await pokemansService.getOnePokeman(index)
+            console.log(name)
+            await pokemansService.getOnePokeman(name)
         } catch (error) {
             Pop.error(error)
             console.error(error)

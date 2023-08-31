@@ -1,6 +1,7 @@
 import { AboutController } from "./controllers/AboutController.js";
 import { HomeController } from "./controllers/HomeController.js";
 import { PokemansController } from "./controllers/PokemansController.js";
+import { SandboxPokemanController } from "./controllers/SandboxPokemanController.js";
 import { ValuesController } from "./controllers/ValuesController.js";
 import { AboutView } from "./views/AboutView.js";
 
@@ -11,12 +12,12 @@ import { AboutView } from "./views/AboutView.js";
 export const router = [
   {
     path: '',
-    controller: PokemansController,
+    controller: [PokemansController],
     view: /*html*/`
     <section class="row">
-    <div class="bg-danger text-light col-4" id="pokeman-list">
+    <div class="bg-danger col-4 text-light col-4" id="pokeman-list">
     </div>
-    <div id="active-pokeman"></div>
+    <div class="col-6" id="active-pokeman"></div>
     
     </section>
     `

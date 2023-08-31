@@ -18,10 +18,10 @@ class PokemansService{
         console.log(AppState.pokemanList)
     }
 
-    async getOnePokeman(index){
+    async getOnePokeman(name){
         
-        console.log(index)
-        const res = await pokeapi.get(`pokemon/${index}`)
+        console.log(name)
+        const res = await pokeapi.get(`pokemon/${name}`)
         console.log('ONE BAD BOI',res.data)
         AppState.activePokeman = new Pokeman(res.data)
     }
